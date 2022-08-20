@@ -1,5 +1,6 @@
 const { ApolloServer, gql } = require('apollo-server');
 //3:g~~@EkB*u9Tmy
+// heroku config:set NODE_ENV=development
 const typeDefs = gql`
  
   type Book {
@@ -15,7 +16,7 @@ const typeDefs = gql`
 
 const books = [
   {
-    title: 'City of Glass',
+    title: 'The Awakening',
     author: 'Vicky',
   },
     {
@@ -66,7 +67,9 @@ const resolvers = {
   server.listen({ port: process.env.PORT || 4000 }).then(({ url }) => {
     console.log(`
       🚀  Server is ready at ${url}
-      📭  Query at https://studio.apollographql.com/dev
+      📭  Query at https://studio.apollographql.com/dev,
+      
     `);
+   // console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
   });
   
