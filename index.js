@@ -47,7 +47,7 @@ const resolvers = {
     resolvers,
     csrfPrevention: true,
     cache: 'bounded',
-    introspection:true,
+   // introspection: process.env.NODE_ENV !== 'production',
     plugins: [
       ApolloServerPluginLandingPageLocalDefault({ embed: true }),
     ],
