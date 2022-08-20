@@ -14,6 +14,10 @@ const typeDefs = gql`
 `;
 
 const books = [
+  {
+    title: 'City of Glass',
+    author: 'Vicky',
+  },
     {
       title: 'The Awakening',
       author: 'Kate Chopin',
